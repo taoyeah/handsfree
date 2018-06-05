@@ -1,3 +1,7 @@
+<!--
+  Copyright 2018 The HandsFree
+-->
+
 <launch>
 
   <!-- Launch the OpenNI2 driver -->
@@ -11,6 +15,6 @@
     <param name="output_frame_id" value="/camera_depth_frame" />
   </node>
 
-  <node pkg="tf" type="static_transform_publisher" name="link2_broadcaster" args="0 0 0 0 0 0 base_link camera_link 50" />
+  <node pkg="tf" type="static_transform_publisher" name="base_camera_broadcaster" args="0 0 1 0 0 0 base_link camera_link 50" />
 
 </launch>
